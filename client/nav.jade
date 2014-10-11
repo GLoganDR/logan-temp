@@ -1,19 +1,75 @@
-.navbar.navbar-default(role='navigation', ng-controller='NavCtrl')
-  .container
-    .navbar-header
-      button.navbar-toggle(data-toggle='collapse', data-target='#bs-navbar-collapse')
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a.navbar-brand(href='/') MEAN Template
+header#header.site-header(role='banner')
+  #frr-top-bar.top-bar-wrap
+    .container
+      .left-widget-wrap.left
+        .phone.left
+          i.fa.fa-phone
+          | (11) 987 55 444
+      .right-widget-wrap.right
+        .top-social
+          ul#social-area-top
+            li.twitter
+              a(href='#')
+                i.fa.fa-twitter
+            li.facebook
+              a(href='#')
+                i.fa.fa-facebook
+            li.google-plus
+              a(href='#')
+                i.fa.fa-google-plus
+            li.pinterest
+              a(href='#')
+                i.fa.fa-pinterest
+  #frr-top-nav-wrapper
+    .container
+      .row
+        #logo.col-lg-4.col-md-12.col-sm-12
+          .logo-outer
+            a.logo(href='index.html', title='Home')
+              span
+        nav(role='navigation')
+          #top-nav.col-lg-8.col-md-12.col-sm-12
+            .top-nav-wrap.right.navbg
+              a#mobile-menu-trigger.mobile-menu-closed(href='#')
+                i.fa.fa-bars
+              ul#menu.sf-menu
+                li.cl-effect-4
+                  a(href='/#/')
+                    span Home
+                li.cl-effect-4
+                  a(href='/#/')
+                    span About Us
+                li.cl-effect-4
+                  a(href='/#/')
+                    span Portfolio
+                li.dropdown.cl-effect-4
+                  a.sf-with-ul(href='/#/')
+                    span Pages
+                  ul
+                    li
+                      a(href='/#/') About Us
+                    li
+                      a(href='/#/') Elements
+                    li
+                      a(href='/#/') 403 Page
+                    li
 
-    .collapse.navbar-collapse#bs-navbar-collapse
-      ul.nav.navbar-nav.navbar-right(ng-hide='email')
-        li: a(href='/#/') Home
-        li: a(href='/#/register') Register
-        li: a(href='/#/login') Login
-      ul.nav.navbar-nav.navbar-right(ng-show='email')
-        li: a(href='/#/') Home
-        li: a(href='/#/logout') {{email}}
-
+                      a(href='/#/') FAQ
+                li.cl-effect-4
+                  a(href='/#/')
+                    span Blog
+                li.cl-effect-4
+                  a(href='/#/')
+                    span Contact
+                li
+                  a.popup-with-zoom-anim(href='#small-dialog')
+                    i.fa.fa-search
+                  form#small-dialog.frr_fade.zoom-anim-dialog.mfp-hide
+                    fieldset(style='border: 0;')
+                      ol(style='list-style: none;')
+                        li
+                          span
+                            i.fa.fa-search
+                          input#search(name='search', type='text', placeholder='', autocomplete='off', required='required')
+                  // END #small-dialog 
+        // end top-nav 
